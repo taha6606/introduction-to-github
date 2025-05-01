@@ -1,0 +1,48 @@
+local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/Library-ui/refs/heads/main/Redzhubui"))()
+
+local Window = redzlib:MakeWindow({
+  Title = "dada hub : dead rails",
+  SubTitle = "by dada",
+  SaveFolder = "testando | redz lib v5.lua"
+})
+
+local Tab1 = Window:MakeTab({"fly", "cherry"})
+local Section = Tab1:AddSection({"fly"})
+
+local Toggle1 = Tab1:AddToggle({
+  Name = "Toggle",
+  Description = "This is a <font color='rgb(88, 101, 242)'>Toggle</font> Example",
+  Default = false 
+})
+Toggle1:Callback(function(Value)
+ print[2]
+end)
+
+Tab1:AddButton({"aimbot", function(Value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Robloxscript-rubika/Robloxscript-rubika/refs/heads/main/Mobile"))()
+end})
+
+local Paragraph = Tab1:AddParagraph({"سازنده", "dada is god"})
+
+Tab1:AddSlider({
+  Name = "Speed",
+  Min = 1,
+  Max = 10000,
+  Increase = 1,
+  Default = 16,
+  Callback = function(Value)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
+  end
+})
+
+Tab1:AddDiscordInvite({
+    Name = "dada hub",
+    Description = "Join server",
+    Logo = "rbxassetid://79890671948413",
+    Invite = "https://web.rubika.ir/#c=c0CiVjm081712690bd189dd1f04d8727",
+})
+
+Window:AddMinimizeButton({
+    Button = { Image = "rbxassetid://71014873973869", BackgroundTransparency = 0 },
+    Corner = { CornerRadius = UDim.new(35, 1) },
+})
